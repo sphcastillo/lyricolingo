@@ -1,4 +1,5 @@
 import { Document, Schema, model, models } from "mongoose";
+import connectDB from "../db";
 
 export interface User extends Document{
     name: string;
@@ -18,6 +19,8 @@ const userSchema = new Schema<User>({
 const UserModel = models.User || model<User>("User", userSchema);
 
 export async function deleteUserByEmail(email: string): Promise<void>{
+    await connectDB();
+    
     try {
         const user = await UserModel.findOne({ email });
         if(!user){
@@ -33,7 +36,8 @@ export async function deleteUserByEmail(email: string): Promise<void>{
 }
 
 export async function addUser(name: string, age: number, email: string, languagePreference: string) : Promise<User>{
-    
+        await connectDB();
+
         try {
             const user = new UserModel({ name, age, email, languagePreference });
 
@@ -48,6 +52,8 @@ export async function addUser(name: string, age: number, email: string, language
 }
 
 export async function fetchUsers() : Promise<User[]> {
+    await connectDB();
+
     try {
         const users = await UserModel.find();
         return users;
