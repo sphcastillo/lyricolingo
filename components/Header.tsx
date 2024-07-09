@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import LyricoLingoLogo from "@/images/logo.png";
 
+
 const navigation = [
     { name: 'Home', href: '#' },
     { name: 'Discover', href: '#' },
@@ -51,7 +52,7 @@ function Header() {
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                         <a href="#" className="text-sm font-semibold leading-6 text-white">
-                        Log in <span aria-hidden="true">&rarr;</span>
+                        Log in
                         </a>
                     </div>
                     </nav>
@@ -63,11 +64,11 @@ function Header() {
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Company</span>
                                 <Image
-                                className="h-8 w-auto"
-                                src={LyricoLingoLogo}
-                                alt=""
-                                width={250}
-                                height={250}
+                                    className="h-8 w-auto"
+                                    src={LyricoLingoLogo}
+                                    alt=""
+                                    width={250}
+                                    height={250}
                                 />
                             </a>
                             <button
