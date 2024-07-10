@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import ClientProviders from "@/components/ClientProviders";
 
 
 export const metadata: Metadata = {
@@ -18,14 +19,13 @@ export default function Home({
 
 
   return (
-
+    <ClientProviders>
       <html lang="en">
-
-        <body className=''>
+        <body className='bg-black'>
           <Header />
           {children}
         </body>
       </html>
-
+    </ClientProviders>
   );
 }
