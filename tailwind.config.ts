@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        tough: ['var(--font-tough)', 'sans-serif'],
+        // rosamila: ['Rosamila', 'sans-serif'],
+        // bilingual: ['Bilingual', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

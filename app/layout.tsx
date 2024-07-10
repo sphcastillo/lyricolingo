@@ -21,7 +21,7 @@ export default function Home({
   return (
     <ClientProviders>
       <html lang="en">
-        <body className='bg-black'>
+        <body className='min-h-screen'>
           <Header />
           {children}
         </body>

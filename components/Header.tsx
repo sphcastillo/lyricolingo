@@ -11,7 +11,7 @@ async function Header() {
   console.log("session: ", session);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="absolute inset-x-0 top-0 z-50 ">
       <nav className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center p-5 pl-2">
         <Link href="/" prefetch={false} className="overflow-hidden">
           <span className="sr-only">LyricoLingo</span>
@@ -24,7 +24,7 @@ async function Header() {
           />
         </Link>
 
-        <div className="flex-1 flex items-center justify-end space-x-4">
+        <div className=" flex-1 flex items-center justify-end space-x-4">
           {session ? (
             <>
               <Link
@@ -32,9 +32,11 @@ async function Header() {
                 className="flex justify-center items-center space-x-1"
                 prefetch={false}
               >
+                <div>
                 <span className="text-sm font-semibold leading-6 text-white">
-                  What's New
+                  What&apos;s New
                 </span>
+                </div>
               </Link>
               <Link
                 href={"/discover"}

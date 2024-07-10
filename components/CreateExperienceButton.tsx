@@ -1,7 +1,6 @@
 "use client"
 
 import { useRouter } from 'next/navigation';
-import { Button } from './ui/button';
 import Link from "next/link";
 
 function CreateChatButton() {
@@ -14,7 +13,7 @@ function CreateChatButton() {
     }
     return (
         <Link href="/" onClick={createNewTranslation}>
-            <span className='text-white'>Find a Song</span>
+            <span className='text-white text-sm '>Find a Song</span>
         </Link>
     )
 }

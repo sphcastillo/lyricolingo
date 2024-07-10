@@ -44,15 +44,15 @@ function Hero() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-6xl font-bold tracking-tight text-white sm:text-8xl">
+            <h1 className="text-6xl font-bold tracking-widest text-white sm:text-8xl">
               LyricoLingo
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-100">
+            <h2 className="mt-6 text-2xl leading-8 text-gray-100">
               From chart-toppers to hidden gems, immerse yourself in the
               ultimate musical adventure, where every lyric unlocks a world of
               fluency. Let&apos;s turn up the beat and rock those language
               skills like never before!
-            </p>
+            </h2>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"

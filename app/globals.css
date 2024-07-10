@@ -1,3 +1,44 @@
+/* @font-face {
+  font-family: 'Tough';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/Tough_Regular.otf') format('opentype');
+
+} */
+
+/* body {
+  font-family: var(--font-tough), sans-serif;
+} */
+
+/* @font-face {
+  font-family: 'Rosamila';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Rosamila_Regular.otf') format('opentype');
+
+}
+
+@font-face {
+  font-family: 'Bilingual';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Bilingual_Serif_Font.ttf') format('truetype');
+
+}
+
+h1 {
+  @apply font-rosamila
+}
+
+h2 {
+  @apply font-tough
+}
+
+span {
+  @apply font-bilingual
+
+} */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

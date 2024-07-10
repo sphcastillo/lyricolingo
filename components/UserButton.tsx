@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button"
 import { signIn, signOut } from "next-auth/react";
 
 
-function UserButton({ session } : { session: Session | null}) {
+function UserButton({ session } : { session : Session | null}) {
     // Subscription listener...
 
     if(!session)
