@@ -1,11 +1,8 @@
-import { authOptions } from "@/auth";
 import Hero from "@/components/Hero";
-import { getServerSession } from "next-auth";
 import Link from "next/link";
 
 export default function Home() {
-  const session = getServerSession(authOptions);
-  console.log("session ~ Homepage: ", session);
+
   return (
     <main className="max-w-7xl mx-auto">
       <Hero />

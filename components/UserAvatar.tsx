@@ -25,7 +25,7 @@ function UserAvatar({
         )}
         <AvatarFallback
             delayMs={1000}
-            className="text-lg"
+            className="text-lg text-white border border-white bg-amber-500"
         >
             {name 
                 ?.split(" ")
