@@ -13,7 +13,11 @@ export const authOptions: NextAuthOptions = {
                 }
             }
         }),
-    ]
+    ],
+    // Upgrade our session strategy
+    session: {
+        strategy: 'jwt',
+    }
 
 } satisfies NextAuthOptions;
 

@@ -23,26 +23,26 @@ export default function Home() {
         <div className="py-12 sm:py-20 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-white">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl light:text-orange dark:text-white">
                 Chat with Anyone, anywhere!
               </h1>
               <p className="pt-6 text-white">
                 You speak your language, they speak their language.{" "}
-                <span className="text-indigo-600 dark:text-indigo-500">
+                <span className="text-amber-700 dark:text-indigo-500">
                   Let AI handle the translation.
                 </span>
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link
                   href="/chat"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-amber-500 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Start Chatting
                 </Link>
 
                 <Link
                   href="/pricing"
-                  className="text-sm font-semibold leading-6 text-white"
+                  className="text-sm font-semibold leading-6 text-orange dark:text-amber-500"
                 >
                   View Pricing
                 </Link>

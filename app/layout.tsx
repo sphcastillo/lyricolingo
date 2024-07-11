@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import ClientProviders from "@/components/ClientProviders";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 
 export const metadata: Metadata = {
@@ -22,8 +23,17 @@ export default function Home({
     <ClientProviders>
       <html lang="en">
         <body className='min-h-screen'>
+          <ThemeProvider
+            defaultTheme="dark"
+            attribute="class"
+            enableSystem
+            disableTransitionOnChange
+          >
+
           <Header />
+
           {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClientProviders>
