@@ -25,7 +25,7 @@ function CheckoutButton() {
 
     // ... Stripe extension on firebase will create a checkout session 
     //listen to checkout session
-    return onSnapshot(docRef, snap => {
+    return onSnapshot(docRef, (snap) => {
       const data = snap.data();
       const url = data?.url;
       const error = data?.error;
@@ -34,7 +34,7 @@ function CheckoutButton() {
         // Show an error to your customer
         // inspect your Cloud Function logs in the Firebase console
         alert(`An error occured: ${error.message}`);
-        setLoading
+        setLoading(false);
       }
 
       if(url){

@@ -13,7 +13,8 @@ export const authOptions: NextAuthOptions = {
                 params: {
                     prompt: 'select_account'
                 }
-            }
+            },
+            allowDangerousEmailAccountLinking: true,
         }),
     ],
     // Fix gap ~ signed in thru NextAuth but not in Google/ Firebase
