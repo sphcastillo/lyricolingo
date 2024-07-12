@@ -19,7 +19,7 @@ export default function Home({
   return (
     <ClientProviders>
       <html lang="en">
-        <body className="min-h-screen">
+        <body className="min-h-screen bg-amber-400 dark:bg-gray-950">
           <FirebaseAuthProvider>
             <ThemeProvider
               defaultTheme="dark"

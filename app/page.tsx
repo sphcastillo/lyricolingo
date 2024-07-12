@@ -7,7 +7,7 @@ export default function Home() {
     <main className="max-w-7xl mx-auto">
       <Hero />
 
-      <div className="relative isolate pt-14 dark:bg-gray-900">
+      {/* <div className="relative isolate pt-14 dark:bg-gray-900">
         <div
           className="absolute inset-x-0 top-28 -z-10 transform-gpu overflow-hidden blur-3xl"
           aria-hidden="true"
@@ -52,14 +52,14 @@ export default function Home() {
 
             <div className="mt-16 flow-root sm:mt-24">
               <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-                {/* <Image
+                <Image
                   unoptimized
                   src={DemoGif}
                   alt="App screenshot"
                   width={2432}
                   height={1442}
                   className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
-                /> */}
+                />
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Home() {
             }}
           />
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
