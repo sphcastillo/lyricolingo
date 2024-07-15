@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import ClientProviders from "@/components/ClientProviders";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import FirebaseAuthProvider from "@/components/FirebaseAuthProvider";
+import SubscriptionProvider from "@/components/SubscriptionProvider";
 
 export const metadata: Metadata = {
   title: "LyricoLingo",
@@ -21,16 +22,18 @@ export default function Home({
       <html lang="en">
         <body className="min-h-screen bg-amber-400 dark:bg-gray-950">
           <FirebaseAuthProvider>
-            <ThemeProvider
-              defaultTheme="dark"
-              attribute="class"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <Header />
+            <SubscriptionProvider>
+              <ThemeProvider
+                defaultTheme="dark"
+                attribute="class"
+                enableSystem
+                disableTransitionOnChange
+              >
+                <Header />
 
-              {children}
-            </ThemeProvider>
+                {children}
+              </ThemeProvider>
+            </SubscriptionProvider>
           </FirebaseAuthProvider>
         </body>
       </html>
