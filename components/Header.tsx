@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LyricoLingoLogo from "@/images/logo.png";
+// import LyricoLingoLogo from "@/images/logo.png";
 import UserButton from "./UserButton";
 import Link from "next/link";
 import { getServerSession } from "next-auth";
@@ -7,6 +7,7 @@ import { authOptions } from "@/auth";
 import CreateExperienceButton from "./CreateExperienceButton";
 import { DarkModeToggle } from "./DarkModeToggle";
 import localFont from 'next/font/local';
+import UpgradeBanner from "./UpgradeBanner";
 
 const rosamila = localFont({
   src: './fonts/Rosamila_Regular.otf'
@@ -23,10 +24,11 @@ const bilingual = localFont({
 
 async function Header() {
   const session = await getServerSession(authOptions);
-  console.log("session: ", session);
+  // console.log("session: ", session);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 h-[72px] bg-transparent">
+      <UpgradeBanner />
       <nav className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center p-5 pl-2">
         <Link href="/" prefetch={false} className="overflow-hidden">
           <span className="sr-only">LyricoLingo</span>

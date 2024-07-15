@@ -15,6 +15,7 @@ function SubscriptionProvider({
     children: React.ReactNode;
 }) {
     const { data: session } = useSession();
+    // console.log("SubscriptionProvider Session: ", session);
     const setSubscription = useSubscriptionStore(
         (state) => state.setSubscription
     );
@@ -22,13 +23,15 @@ function SubscriptionProvider({
     useEffect(() => {
         if (!session?.user.id) return;
         
-        return onSnapshot(subscriptionRef(session?.user.id), (snapshot) => {
+        return onSnapshot(
+            subscriptionRef(session.user.id), 
+            (snapshot) => {
             if(snapshot.empty){
                 console.log("Attention: User has NO subscription");
                 setSubscription(null);
             }else {
-                console.log("User has a subscription");
-                setSubscription(snapshot.docs[0].data())
+                console.log("Document data: ", snapshot.docs[0].data());
+                setSubscription(snapshot.docs[0].data());
             }
         },
     (error) => {
@@ -43,4 +46,4 @@ function SubscriptionProvider({
     )
 }
 
-export default SubscriptionProvider
+export default SubscriptionProvider;
